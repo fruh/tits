@@ -1,0 +1,34 @@
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+~*
+massif.*
+
+# object files
+*.o
+*.gch
+*.pyc
+
+# sublime
+*.sublime-*
+
+# vim generated files
+*.swp
+
+# key files
+*.der
+
+# build
+build
+dist
+tmp
+
+# indent files
+*~
