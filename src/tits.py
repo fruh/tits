@@ -38,7 +38,7 @@ def print_all(images_base64, slow):
 
 
 if __name__ == "__main__":
-    parser = OptionParser(usage="%prog [options]", version="%prog 0.2", description="Show random ASCII art pictures like tits 8).")
+    parser = OptionParser(usage="%prog [options]", version="%prog 0.2", description="""Show ASCII art pictures like tits 8). By default random tits are slowly printed, but you can select one or print funny one.""")
     parser.add_option("-f", "--funny", dest="funny", action="store_true",
                       help="Show random funny picture", default=False)
     parser.add_option("-n", "--not-slow", dest="slow", action="store_false",
