@@ -1,4 +1,4 @@
-Tits is a simple application which shows pcitures like tits 8).
+Tits is a simple application which shows pictures like tits 8).
 
                                           ..gspp..           
                                         .d$$S$$S$$Sb.        
