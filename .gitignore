@@ -16,6 +16,9 @@ massif.*
 *.gch
 *.pyc
 
+# base64
+*.base64
+
 # sublime
 *.sublime-*
 
