@@ -63,7 +63,7 @@ cd src/
 ./tits
 ```
 
-Or you can install it using the following commadn:
+Or you can install it using the following command:
 ```
 cd src/
 python setup.py install
