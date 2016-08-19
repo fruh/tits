@@ -11,34 +11,13 @@
 #  */
 
 import random
-import base64
-import time
 from optparse import OptionParser
 
-import images
-
-def print_image(images_base64, index, slow):
-    img = base64.decodestring(images_base64[index])
-
-    if slow:
-        img_splitted = img.split("\n")
-
-        for l in img_splitted:
-            print l
-            time.sleep(0.1)
-    else:
-        print img
-
-
-def print_all(images_base64, slow):
-    for i in range(len(images_base64)):
-        print "Picture #%d" % i
-        print_image(images_base64, i, slow)
-        print ""
-
+from liketits import tits, VERSION
+from liketits import images
 
 if __name__ == "__main__":
-        parser = OptionParser(usage="%prog [options]", version="%prog 0.2", description="""Show ASCII art pictures like tits 8). By default random tits are slowly printed, but you can select one or print funny one.""")
+        parser = OptionParser(usage="%prog [options]", version="%prog " + VERSION, description="""Show ASCII art pictures like tits 8). By default random tits are slowly printed, but you can select one or print funny one.""")
         parser.add_option("-f", "--funny", dest="funny", action="store_true",
                           help="Show random funny picture", default=False)
         parser.add_option("-n", "--not-slow", dest="slow", action="store_false",
@@ -61,17 +40,17 @@ if __name__ == "__main__":
         while loop:
             try:
                 if options.funny:
-                    print_image(images.funlist, random.randrange(len(images.funlist)), options.slow)
+                    tits.print_image(images.funlist, random.randrange(len(images.funlist)), options.slow)
                 elif options.select_funny:
-                    print_image(images.funlist, options.select_funny % len(images.funlist), options.slow)
+                    tits.print_image(images.funlist, options.select_funny % len(images.funlist), options.slow)
                 elif options.select_tits:
-                    print_image(images.titslist, options.select_tits % len(images.titslist), options.slow)
+                    tits.rint_image(images.titslist, options.select_tits % len(images.titslist), options.slow)
                 elif options.all_tits:
-                    print_all(images.titslist, options.slow)
+                    tits.print_all(images.titslist, options.slow)
                 elif options.all_funny:
-                    print_all(images.funlist, options.slow)
+                    tits.print_all(images.funlist, options.slow)
                 else:
-                    print_image(images.titslist, random.randrange(len(images.titslist)), options.slow)
+                    tits.print_image(images.titslist, random.randrange(len(images.titslist)), options.slow)
             except KeyboardInterrupt, SystemExit:
                 pass
             else:

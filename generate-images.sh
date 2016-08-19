@@ -12,7 +12,7 @@
 for f in $(find ./res/ -name '*.txt'); do cat $f | base64 -w 0 > ${f}.base64; done
 
 # create py source
-file=src/images.py
+file=src/liketits/images.py
 echo "#!/usr/bin/python" > $file
 echo "# -*- coding: utf-8 -*-" >> $file
 echo "" >> $file

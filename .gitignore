@@ -35,3 +35,6 @@ tmp
 
 # indent files
 *~
+
+# setup files
+*.egg-*
